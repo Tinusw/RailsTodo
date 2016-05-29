@@ -2,9 +2,9 @@
 	<div class="table row tasks finished display">
 	  <div class="col-md-11">
 	  	<h4>
-	  		<strike><%= todo_item.content %></strike>
+	  		<%= todo_item.content %>
 	  		<br>
-	  		<strike><h5><%= todo_item.desc %></h5></strike>
+		    <h5><%= todo_item.desc %></h5>
 	  	</h4>
 	  </div>
     
@@ -16,7 +16,6 @@
 	</div>
 		  
 	<% else %>
-
 	<div class="table row tasks unfinished">
 	  <div class="col-md-10">
 	  	<h4>

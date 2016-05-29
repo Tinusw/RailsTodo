@@ -12,16 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <h4 class="list-title">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </h4>
   </div>
 
   <div class="field">
-    <%= f.label :desc %>
-    <%= f.text_area :desc %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <h4 class="list-desc">
+      <%= f.label :desc %>
+      <br>
+      <%= f.text_area :desc %>
+    </h4>
+    
+    <h3>
+      <%= f.submit(class: "btn btn-success") %>
+    </h3>
   </div>
 <% end %>

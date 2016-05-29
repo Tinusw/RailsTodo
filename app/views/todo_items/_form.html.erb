@@ -1,9 +1,10 @@
 <%=  form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
   <div class="task well text-center">
 	  <%= f.text_field :content, placeholder: "Add a new task to the list!" %>
-	  <%= f.text_field :desc, placeholder: "Describe the task1" %>
+	  <%= f.text_field :desc, placeholder: "Describe the task!" %>
 	  <h3>
       <%= f.submit(class: "btn btn-success") %>
     </h3>
   </div>
 <% end %>
+

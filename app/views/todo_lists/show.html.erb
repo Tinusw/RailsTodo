@@ -1,21 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="col-md-6 col-md-offset-3 main">
+	<div class="list row well text-center">
+	  <h3>
+		  <%= @todo_list.title %>
+	  </h3>
+	  <h5>
+		  <%= @todo_list.desc %>
+	  </h5>
+	</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
-
-<p>
-  <strong>Desc:</strong>
-  <%= @todo_list.desc %>
-</p>
-
-<div class="row well text-left">
-	<%= render @todo_list.todo_items %>
-	<div>
-		<%= render "todo_items/form" %>
+	<div class="row well text-left">
+		<%= render @todo_list.todo_items %>
+		<div>
+			<%= render "todo_items/form" %>
+		</div>
+	</div>
+	<div class="new text-center">
+	  <label> Only show uncompleted tasks?
+	    <input id="checkUncompletedTasks" type="checkbox" unchecked>
+    </label>
+    <br>
+		<%= link_to 'Back', todo_lists_path %>
 	</div>
 </div>
-
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>

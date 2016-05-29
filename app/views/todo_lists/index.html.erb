@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="col-md-6 col-md-offset-3 main">
+  <div class="header text-center">
+    <h1 class="header-center">Todo Lists</h1>
+  </div>
+  
+  <% @todo_lists.each do |todo_list| %>
+  <div class="lists row well">
+    <h2 class="list-title col-md-11">
+      <%= link_to todo_list.title, todo_list %>
+    </h2>
+    <h4 class="list-del col-md-1">
+      <%= link_to todo_list, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <h5 class="glyphicon glyphicon-remove"></h5>
+      <% end %>
+    </h4>
+    <h5 class="list-desc">
+      <%= todo_list.desc %>
+    </h5>
+    
+  </div>
+  <% end %>
 
-<h1>Todo Lists</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Desc</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @todo_lists.each do |todo_list| %>
-      <tr>
-        <td><%= todo_list.title %></td>
-        <td><%= todo_list.desc %></td>
-        <td><%= link_to 'Show', todo_list %></td>
-        <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
-        <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Todo List', new_todo_list_path %>
+  <div class="container new text-center">
+    <h3>
+      <%= link_to 'New Todo List', new_todo_list_path %>
+    </h3>
+  </div>
+</div>
