@@ -15,16 +15,14 @@
 			<%= render "todo_items/form" %>
 		</div>
 	</div>
-	<div class="new text-center">
-	  <label><bold> Only show uncompleted tasks?</bold>
+	<div class="new text-center btn btn-info">
+	  <label><bold id="filterText"> Only show uncompleted tasks?</bold>
 	    <br>
-	    <div class="btn btn-info">
 	      <h3 class="glyphicon glyphicon-ok" id="tick"></h3>
 		    <input id="checkUncompletedTasks" type="checkbox" unchecked hidden>
-		  </div>
     </label>
   </div>
-  <div class="new text-center">
+  <div class="new text-center btn btn-info back">
 		<%= link_to 'Back', todo_lists_path %>
 	</div>
 </div>

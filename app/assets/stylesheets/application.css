@@ -131,3 +131,7 @@ body {
 #tick {
 	margin-top: 0;
 }
+
+#filterText {
+	color: black;
+}
