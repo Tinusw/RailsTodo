@@ -127,3 +127,7 @@ body {
 	width: 100%;
 	height: 40px
 }
+
+#tick {
+	margin-top: 0;
+}

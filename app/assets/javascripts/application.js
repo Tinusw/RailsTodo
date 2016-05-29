@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$("#checkUncompletedTasks").click(function() {
+		if( $(this).is(':checked')){
+			console.log("checked!")
+			$(".display").css("display", "none")
+		} else {
+			$(".display").css("display", "inherit")
+		}
+	});
+	
+	console.log("loaded")
+});

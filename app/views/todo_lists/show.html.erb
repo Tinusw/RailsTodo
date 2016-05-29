@@ -16,10 +16,15 @@
 		</div>
 	</div>
 	<div class="new text-center">
-	  <label> Only show uncompleted tasks?
-	    <input id="checkUncompletedTasks" type="checkbox" unchecked>
+	  <label><bold> Only show uncompleted tasks?</bold>
+	    <br>
+	    <div class="btn btn-info">
+	      <h3 class="glyphicon glyphicon-ok" id="tick"></h3>
+		    <input id="checkUncompletedTasks" type="checkbox" unchecked hidden>
+		  </div>
     </label>
-    <br>
+  </div>
+  <div class="new text-center">
 		<%= link_to 'Back', todo_lists_path %>
 	</div>
 </div>
