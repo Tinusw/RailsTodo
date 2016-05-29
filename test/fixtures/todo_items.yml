@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  desc: MyString
+  todo_list: one
+
+two:
+  content: MyString
+  desc: MyString
+  todo_list: two
