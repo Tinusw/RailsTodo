@@ -1,2 +1,4 @@
 <p><%= todo_item.content %> </p>
 <p><%= todo_item.desc %> </p>
+
+<%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete %>
