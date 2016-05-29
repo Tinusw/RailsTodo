@@ -1,4 +1,39 @@
-<p><%= todo_item.content %> </p>
-<p><%= todo_item.desc %> </p>
+<% if todo_item.completed? &&  %>
+	<div class="table row tasks finished display">
+	  <div class="col-md-11">
+	  	<h4>
+	  		<strike><%= todo_item.content %></strike>
+	  		<br>
+	  		<strike><h5><%= todo_item.desc %></h5></strike>
+	  	</h4>
+	  </div>
+    
+    <div class="col-md-1">
+		  <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete do %>
+		     <h5 class="glyphicon glyphicon-remove"></h5>
+		  <% end %>
+		</div>
+	</div>
+		  
+	<% else %>
 
-<%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete %>
+	<div class="table row tasks unfinished">
+	  <div class="col-md-10">
+	  	<h4>
+	  		<%= todo_item.content %>
+	  		<br>
+	  		<h5><%= todo_item.desc %></h5>
+	  	</h4>
+	  </div>
+	  <div class="col-md-1">
+	  	<%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
+			  <h4 class="glyphicon glyphicon-ok"></h4>
+	  	<% end %>
+	  </div>
+	  <div class="col-md-1">
+		  <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete do %>
+		     <h4 class="glyphicon glyphicon-remove"></h4>
+		  <% end %>
+		</div>
+	</div>
+<% end %>
